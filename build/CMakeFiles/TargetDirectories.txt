@@ -1,0 +1,6 @@
+C:/Users/vasil/Desktop/boost_test/boost-log-example-master/boost-log-example-master/build/CMakeFiles/rebuild_cache.dir
+C:/Users/vasil/Desktop/boost_test/boost-log-example-master/boost-log-example-master/build/CMakeFiles/boost_log.dir
+C:/Users/vasil/Desktop/boost_test/boost-log-example-master/boost-log-example-master/build/CMakeFiles/edit_cache.dir
+C:/Users/vasil/Desktop/boost_test/boost-log-example-master/boost-log-example-master/build/univalue/CMakeFiles/univalue.dir
+C:/Users/vasil/Desktop/boost_test/boost-log-example-master/boost-log-example-master/build/univalue/CMakeFiles/edit_cache.dir
+C:/Users/vasil/Desktop/boost_test/boost-log-example-master/boost-log-example-master/build/univalue/CMakeFiles/rebuild_cache.dir

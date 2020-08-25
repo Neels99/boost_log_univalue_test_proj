@@ -1,0 +1,100 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.18.1"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "univalue",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.18.1"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "univalue",
+					"targetIndexes" : 
+					[
+						1
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "boost_log",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1
+					],
+					"name" : "univalue",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "boost_log::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-boost_log-Debug-95d1bb9aa24450eaca2c.json",
+					"name" : "boost_log",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "univalue::@846bf969268785f9fb11",
+					"jsonFile" : "target-univalue-Debug-47b473961c52399209b9.json",
+					"name" : "univalue",
+					"projectIndex" : 1
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/vasil/Desktop/boost_test/boost-log-example-master/boost-log-example-master/build",
+		"source" : "C:/Users/vasil/Desktop/boost_test/boost-log-example-master/boost-log-example-master"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 1
+	}
+}

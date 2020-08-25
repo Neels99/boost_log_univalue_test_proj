@@ -1,0 +1,27 @@
+[
+{
+  "directory": "C:/Users/vasil/Desktop/boost_test/boost-log-example-master/boost-log-example-master/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\G__~1.EXE  @CMakeFiles/boost_log.dir/includes_CXX.rsp -g -o CMakeFiles\\boost_log.dir\\src\\main.cpp.obj -c C:\\Users\\vasil\\Desktop\\boost_test\\boost-log-example-master\\boost-log-example-master\\src\\main.cpp",
+  "file": "C:/Users/vasil/Desktop/boost_test/boost-log-example-master/boost-log-example-master/src/main.cpp"
+},
+{
+  "directory": "C:/Users/vasil/Desktop/boost_test/boost-log-example-master/boost-log-example-master/build/univalue",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\G__~1.EXE  @CMakeFiles/univalue.dir/includes_CXX.rsp -g -o CMakeFiles\\univalue.dir\\lib\\univalue.cpp.obj -c C:\\Users\\vasil\\Desktop\\boost_test\\boost-log-example-master\\boost-log-example-master\\univalue\\lib\\univalue.cpp",
+  "file": "C:/Users/vasil/Desktop/boost_test/boost-log-example-master/boost-log-example-master/univalue/lib/univalue.cpp"
+},
+{
+  "directory": "C:/Users/vasil/Desktop/boost_test/boost-log-example-master/boost-log-example-master/build/univalue",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\G__~1.EXE  @CMakeFiles/univalue.dir/includes_CXX.rsp -g -o CMakeFiles\\univalue.dir\\lib\\univalue_get.cpp.obj -c C:\\Users\\vasil\\Desktop\\boost_test\\boost-log-example-master\\boost-log-example-master\\univalue\\lib\\univalue_get.cpp",
+  "file": "C:/Users/vasil/Desktop/boost_test/boost-log-example-master/boost-log-example-master/univalue/lib/univalue_get.cpp"
+},
+{
+  "directory": "C:/Users/vasil/Desktop/boost_test/boost-log-example-master/boost-log-example-master/build/univalue",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\G__~1.EXE  @CMakeFiles/univalue.dir/includes_CXX.rsp -g -o CMakeFiles\\univalue.dir\\lib\\univalue_read.cpp.obj -c C:\\Users\\vasil\\Desktop\\boost_test\\boost-log-example-master\\boost-log-example-master\\univalue\\lib\\univalue_read.cpp",
+  "file": "C:/Users/vasil/Desktop/boost_test/boost-log-example-master/boost-log-example-master/univalue/lib/univalue_read.cpp"
+},
+{
+  "directory": "C:/Users/vasil/Desktop/boost_test/boost-log-example-master/boost-log-example-master/build/univalue",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\G__~1.EXE  @CMakeFiles/univalue.dir/includes_CXX.rsp -g -o CMakeFiles\\univalue.dir\\lib\\univalue_write.cpp.obj -c C:\\Users\\vasil\\Desktop\\boost_test\\boost-log-example-master\\boost-log-example-master\\univalue\\lib\\univalue_write.cpp",
+  "file": "C:/Users/vasil/Desktop/boost_test/boost-log-example-master/boost-log-example-master/univalue/lib/univalue_write.cpp"
+}
+]
