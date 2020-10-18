@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/vasil/Desktop/boost_test/boost-log-example-master/boost-log-example-master/univalue
+# Install script for directory: C:/Users/vasil/Desktop/boost_test/boost-log-example-master/boost_log_univalue_test_proj/univalue
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

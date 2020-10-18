@@ -1,0 +1,2 @@
+C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\ar.exe qc libbna.a CMakeFiles/bna.dir/uint256.cpp.obj CMakeFiles/bna.dir/strencodings.cpp.obj CMakeFiles/bna.dir/str.cpp.obj
+C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\ranlib.exe libbna.a

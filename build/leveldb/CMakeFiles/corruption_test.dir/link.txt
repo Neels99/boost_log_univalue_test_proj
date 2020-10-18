@@ -1,0 +1,3 @@
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E rm -f CMakeFiles\corruption_test.dir/objects.a
+C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\ar.exe cr CMakeFiles\corruption_test.dir/objects.a @CMakeFiles\corruption_test.dir\objects1.rsp
+C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  -fno-exceptions -fno-rtti -g -Wl,--whole-archive CMakeFiles\corruption_test.dir/objects.a -Wl,--no-whole-archive -o corruption_test.exe -Wl,--out-implib,libcorruption_test.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\corruption_test.dir\linklibs.rsp

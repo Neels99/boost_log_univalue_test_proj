@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/vasil/Desktop/boost_test/boost-log-example-master/boost-log-example-master
+# Install script for directory: C:/Users/vasil/Desktop/boost_test/boost-log-example-master/boost_log_univalue_test_proj
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,7 +39,22 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/vasil/Desktop/boost_test/boost-log-example-master/boost-log-example-master/build/univalue/cmake_install.cmake")
+  include("C:/Users/vasil/Desktop/boost_test/boost-log-example-master/boost_log_univalue_test_proj/build/univalue/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("C:/Users/vasil/Desktop/boost_test/boost-log-example-master/boost_log_univalue_test_proj/build/btclibs/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("C:/Users/vasil/Desktop/boost_test/boost-log-example-master/boost_log_univalue_test_proj/build/leveldb/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("C:/Users/vasil/Desktop/boost_test/boost-log-example-master/boost_log_univalue_test_proj/build/dbshell/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -50,5 +65,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/vasil/Desktop/boost_test/boost-log-example-master/boost-log-example-master/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/vasil/Desktop/boost_test/boost-log-example-master/boost_log_univalue_test_proj/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

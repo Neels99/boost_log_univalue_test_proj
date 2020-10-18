@@ -1,0 +1,199 @@
+{
+	"archive" : {},
+	"artifacts" : 
+	[
+		{
+			"path" : "lib/libgtestd.a"
+		}
+	],
+	"backtrace" : 3,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"cxx_library_with_type",
+			"cxx_library",
+			"install",
+			"install_project",
+			"include_directories"
+		],
+		"files" : 
+		[
+			"leveldb/third_party/googletest/googletest/cmake/internal_utils.cmake",
+			"leveldb/third_party/googletest/googletest/CMakeLists.txt",
+			"CMakeLists.txt",
+			"leveldb/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 128,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 202,
+				"parent" : 1
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 150,
+				"parent" : 2
+			},
+			{
+				"command" : 4,
+				"file" : 1,
+				"line" : 146,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 332,
+				"parent" : 4
+			},
+			{
+				"file" : 2
+			},
+			{
+				"command" : 5,
+				"file" : 2,
+				"line" : 15,
+				"parent" : 6
+			},
+			{
+				"command" : 5,
+				"file" : 2,
+				"line" : 16,
+				"parent" : 6
+			},
+			{
+				"file" : 3
+			},
+			{
+				"command" : 5,
+				"file" : 3,
+				"line" : 106,
+				"parent" : 9
+			},
+			{
+				"command" : 5,
+				"file" : 1,
+				"line" : 118,
+				"parent" : 0
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : " -fno-exceptions -fno-rtti -g"
+				},
+				{
+					"fragment" : "-Wall -Wshadow -Werror -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=0 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers"
+				},
+				{
+					"backtrace" : 0,
+					"fragment" : "-Wno-missing-field-initializers"
+				},
+				{
+					"fragment" : "-std=c++11"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"define" : "UNICODE"
+				},
+				{
+					"define" : "_UNICODE"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 7,
+					"path" : "C:/Users/vasil/Desktop/boost_test/boost-log-example-master/boost_log_univalue_test_proj/dbshell"
+				},
+				{
+					"backtrace" : 8,
+					"path" : "C:/Users/vasil/Desktop/boost_test/boost-log-example-master/boost_log_univalue_test_proj/btclibs"
+				},
+				{
+					"backtrace" : 10,
+					"path" : "C:/Users/vasil/Desktop/boost_test/boost-log-example-master/boost_log_univalue_test_proj/build/leveldb/include"
+				},
+				{
+					"backtrace" : 10,
+					"path" : "C:/Users/vasil/Desktop/boost_test/boost-log-example-master/boost_log_univalue_test_proj/leveldb/."
+				},
+				{
+					"backtrace" : 11,
+					"path" : "C:/Users/vasil/Desktop/boost_test/boost-log-example-master/boost_log_univalue_test_proj/leveldb/third_party/googletest/googletest/include"
+				},
+				{
+					"backtrace" : 11,
+					"path" : "C:/Users/vasil/Desktop/boost_test/boost-log-example-master/boost_log_univalue_test_proj/leveldb/third_party/googletest/googletest"
+				}
+			],
+			"language" : "CXX",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"id" : "gtest::@6ac4b6cc4df7fe213291",
+	"install" : 
+	{
+		"destinations" : 
+		[
+			{
+				"backtrace" : 5,
+				"path" : "lib"
+			}
+		],
+		"prefix" : 
+		{
+			"path" : "C:/Program Files (x86)/boost_log"
+		}
+	},
+	"name" : "gtest",
+	"nameOnDisk" : "libgtestd.a",
+	"paths" : 
+	{
+		"build" : "leveldb/third_party/googletest/googletest",
+		"source" : "leveldb/third_party/googletest/googletest"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "leveldb/third_party/googletest/googletest/src/gtest-all.cc",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "STATIC_LIBRARY"
+}

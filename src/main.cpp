@@ -1,7 +1,10 @@
 #include <iostream>
 #include <univalue.h>
+#include <algorithm>
 
 #include <tuple>
+
+#include <ctime>
 // #include "boost/log/trivial.hpp"
 // #include "boost/log/utility/setup.hpp"
 
@@ -57,6 +60,68 @@
 #include <tuple>
 #include <map>
 #include <string>
+#include <fstream>
+#include <vector>
+
+class Network
+{
+public:
+    const unsigned char *str;
+    Network()
+    {
+        // str = new unsigned char[4];
+        unsigned char str2[] = {0x01, 0x01, 0x01, 0x01};
+        str = new unsigned char[4]{0x66, 0x66, 0x66, 0x66};
+        //str = {0x01, 0x01, 0x01, 0x01};//new unsigned char[4]
+    }
+};
+
+class Store
+{
+public:
+    Store(int _a, std::string b, int c)
+    {
+        a = _a;
+        store[b] = c;
+    }
+
+    int a;
+    std::map<std::string, int> store;
+};
+
+class SStore
+{
+public:
+    SStore(Store &store) : s(std::move(store))
+    {
+    }
+
+    Store s;
+};
+
+void GetLen(const unsigned char *pref)
+{
+    std::cout << pref << std::endl;
+    std::cout << strlen((char *)pref) << std::endl;
+    std::cout << 1 << std::endl;
+    char *pref_copy;
+    const char ppref[2] = {0x1, 0x2};
+    std::cout << 2 << std::endl;
+    pref_copy = new char[2];
+    memcpy(pref_copy, ppref, 3);
+    std::cout << 3 << std::endl;
+    std::cout << memcmp(ppref, pref_copy, 2) << std::endl;
+}
+
+void CheckStr(char *arr)
+{
+    std::cout << arr << std::endl;
+}
+
+void CheckStr2(const char arr[])
+{
+    std::cout << arr << std::endl;
+}
 
 #define ADDR std::tuple<std::string, int>
 struct ADDR_VALUE
@@ -82,11 +147,14 @@ int main(int, char **)
 
     std::map<ADDR, ADDR_VALUE> dict;
 
-    auto key = std::make_tuple("123", 23);
-    dict[key] = {1, 2, 3};
+    // auto key = std::make_tuple("123", 23);
+    // dict[key] = {1, 2, 3};
 
-    auto key2 = std::make_tuple("1488", 322);
-    dict[key2] = {3, 2, 1};
+    for (int i = 0; i < 15; i++)
+    {
+        auto key = std::make_tuple("123", i);
+        dict[key] = {i + 1, i + 2.0, i + 3.0};
+    }
 
     UniValue DictVal(UniValue::VARR);
 
@@ -104,12 +172,79 @@ int main(int, char **)
     std::string json = DictVal.write();
     std::cout << json << std::endl;
 
+    std::fstream FOUT("logs//log.log", std::ios_base::out);
+
+    FOUT << json;
+    FOUT.close();
+
     //_______load_________
     UniValue vRead(UniValue::VARR);
+    std::string jsonFromFile;
 
-    vRead.read(json);
+    std::fstream FIN("logs//log.log", std::ios_base::in);
+
+    FIN >> jsonFromFile;
+
+    vRead.read(jsonFromFile);
     for (int i = 0; i < vRead.size(); i++)
     {
-        std::cout << vRead[i]["address"].get_str() << std::endl;
+        std::cout << vRead[i]["port"].get_int() << std::endl;
+    }
+    //_______________________________
+
+    Store store(1, "2", 3);
+    SStore sstore(store);
+
+    std::cout << sstore.s.store["2"] << std::endl;
+    std::cout << store.store["2"] << std::endl;
+
+    //_____________________________________
+
+    const unsigned char prefix[8] = {0x83, 0xE6, 0x5D, 0x2C, 0x81, 0xBF, 0x6D, 0x68};
+
+    std::cout << prefix << std::endl;
+
+    // std::cout << strlen((char*)prefix) << std::endl;
+    GetLen(prefix);
+    //______________________________________
+
+    std::cout << "_________________" << std::endl;
+    //______________________________________
+    const unsigned char v[] = {0x1, 0x2, 0x3, 0x4, 0x5, 0x6, 0x7, 0x8, 0xED};
+
+    std::cout << sizeof(v) / sizeof(v[0]) << std::endl;
+    std::cout << v << std::endl;
+
+    char *v2 = new char[sizeof(v) / sizeof(v[0])];
+    strcpy(v2, (char *)v);
+    std::cout << sizeof(v2) / sizeof(v2[0]) << std::endl;
+    std::cout << v2 << std::endl;
+
+    const char v3[] = {0x01};
+    std::cout << strlen(v3) << " " << v3 << std::endl;
+
+    CheckStr(v2);
+    CheckStr2(v3);
+    //_____________________________________
+
+    Network net;
+    std::cout << net.str << std::endl;
+    //_________________________________
+
+    std::vector<std::string> BOOTSTRAP;
+    BOOTSTRAP = {"test"};
+    //_________________
+    std::cout << "timestamp: " << (double)std::time(nullptr) << std::endl;
+
+    //_________________
+    std::vector<int> vec = {1, 2, 3, 4, 5, 6, 7, 8, -1, 4, 100};
+
+    std::sort(vec.begin(), vec.end(), [](int a, int b) { return a > b; });
+
+    vec.resize(13);
+
+    for (auto val : vec)
+    {
+        std::cout << val << std::endl;
     }
 }

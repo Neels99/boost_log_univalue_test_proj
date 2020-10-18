@@ -66,10 +66,10 @@ RM = "C:\Program Files (x86)\CMake\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\vasil\Desktop\boost_test\boost-log-example-master\boost-log-example-master
+CMAKE_SOURCE_DIR = C:\Users\vasil\Desktop\boost_test\boost-log-example-master\boost_log_univalue_test_proj
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\vasil\Desktop\boost_test\boost-log-example-master\boost-log-example-master\build
+CMAKE_BINARY_DIR = C:\Users\vasil\Desktop\boost_test\boost-log-example-master\boost_log_univalue_test_proj\build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -85,6 +85,30 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	"C:\Program Files (x86)\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	"C:\Program Files (x86)\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	"C:\Program Files (x86)\CMake\bin\cmake.exe" -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	"C:\Program Files (x86)\CMake\bin\cmake.exe" -P cmake_install.cmake
+.PHONY : install/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
@@ -96,11 +120,33 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	"C:\Program Files (x86)\CMake\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	"C:\Program Files (x86)\CMake\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
+
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\vasil\Desktop\boost_test\boost-log-example-master\boost-log-example-master\build\CMakeFiles C:\Users\vasil\Desktop\boost_test\boost-log-example-master\boost-log-example-master\build\\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\vasil\Desktop\boost_test\boost-log-example-master\boost_log_univalue_test_proj\build\CMakeFiles C:\Users\vasil\Desktop\boost_test\boost-log-example-master\boost_log_univalue_test_proj\build\\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\vasil\Desktop\boost_test\boost-log-example-master\boost-log-example-master\build\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\vasil\Desktop\boost_test\boost-log-example-master\boost_log_univalue_test_proj\build\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -154,32 +200,539 @@ univalue/fast:
 	$(MAKE) $(MAKESILENT) -f univalue\CMakeFiles\univalue.dir\build.make univalue/CMakeFiles/univalue.dir/build
 .PHONY : univalue/fast
 
-src/main.obj: src/main.cpp.obj
+#=============================================================================
+# Target rules for targets named btclibs
 
-.PHONY : src/main.obj
+# Build rule for target.
+btclibs: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 btclibs
+.PHONY : btclibs
+
+# fast build rule for target.
+btclibs/fast:
+	$(MAKE) $(MAKESILENT) -f btclibs\CMakeFiles\btclibs.dir\build.make btclibs/CMakeFiles/btclibs.dir/build
+.PHONY : btclibs/fast
+
+#=============================================================================
+# Target rules for targets named c_test
+
+# Build rule for target.
+c_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 c_test
+.PHONY : c_test
+
+# fast build rule for target.
+c_test/fast:
+	$(MAKE) $(MAKESILENT) -f leveldb\CMakeFiles\c_test.dir\build.make leveldb/CMakeFiles/c_test.dir/build
+.PHONY : c_test/fast
+
+#=============================================================================
+# Target rules for targets named leveldb
+
+# Build rule for target.
+leveldb: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 leveldb
+.PHONY : leveldb
+
+# fast build rule for target.
+leveldb/fast:
+	$(MAKE) $(MAKESILENT) -f leveldb\CMakeFiles\leveldb.dir\build.make leveldb/CMakeFiles/leveldb.dir/build
+.PHONY : leveldb/fast
+
+#=============================================================================
+# Target rules for targets named issue200_test
+
+# Build rule for target.
+issue200_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 issue200_test
+.PHONY : issue200_test
+
+# fast build rule for target.
+issue200_test/fast:
+	$(MAKE) $(MAKESILENT) -f leveldb\CMakeFiles\issue200_test.dir\build.make leveldb/CMakeFiles/issue200_test.dir/build
+.PHONY : issue200_test/fast
+
+#=============================================================================
+# Target rules for targets named leveldbutil
+
+# Build rule for target.
+leveldbutil: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 leveldbutil
+.PHONY : leveldbutil
+
+# fast build rule for target.
+leveldbutil/fast:
+	$(MAKE) $(MAKESILENT) -f leveldb\CMakeFiles\leveldbutil.dir\build.make leveldb/CMakeFiles/leveldbutil.dir/build
+.PHONY : leveldbutil/fast
+
+#=============================================================================
+# Target rules for targets named fault_injection_test
+
+# Build rule for target.
+fault_injection_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 fault_injection_test
+.PHONY : fault_injection_test
+
+# fast build rule for target.
+fault_injection_test/fast:
+	$(MAKE) $(MAKESILENT) -f leveldb\CMakeFiles\fault_injection_test.dir\build.make leveldb/CMakeFiles/fault_injection_test.dir/build
+.PHONY : fault_injection_test/fast
+
+#=============================================================================
+# Target rules for targets named env_test
+
+# Build rule for target.
+env_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 env_test
+.PHONY : env_test
+
+# fast build rule for target.
+env_test/fast:
+	$(MAKE) $(MAKESILENT) -f leveldb\CMakeFiles\env_test.dir\build.make leveldb/CMakeFiles/env_test.dir/build
+.PHONY : env_test/fast
+
+#=============================================================================
+# Target rules for targets named version_edit_test
+
+# Build rule for target.
+version_edit_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 version_edit_test
+.PHONY : version_edit_test
+
+# fast build rule for target.
+version_edit_test/fast:
+	$(MAKE) $(MAKESILENT) -f leveldb\CMakeFiles\version_edit_test.dir\build.make leveldb/CMakeFiles/version_edit_test.dir/build
+.PHONY : version_edit_test/fast
+
+#=============================================================================
+# Target rules for targets named dbformat_test
+
+# Build rule for target.
+dbformat_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 dbformat_test
+.PHONY : dbformat_test
+
+# fast build rule for target.
+dbformat_test/fast:
+	$(MAKE) $(MAKESILENT) -f leveldb\CMakeFiles\dbformat_test.dir\build.make leveldb/CMakeFiles/dbformat_test.dir/build
+.PHONY : dbformat_test/fast
+
+#=============================================================================
+# Target rules for targets named corruption_test
+
+# Build rule for target.
+corruption_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 corruption_test
+.PHONY : corruption_test
+
+# fast build rule for target.
+corruption_test/fast:
+	$(MAKE) $(MAKESILENT) -f leveldb\CMakeFiles\corruption_test.dir\build.make leveldb/CMakeFiles/corruption_test.dir/build
+.PHONY : corruption_test/fast
+
+#=============================================================================
+# Target rules for targets named no_destructor_test
+
+# Build rule for target.
+no_destructor_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 no_destructor_test
+.PHONY : no_destructor_test
+
+# fast build rule for target.
+no_destructor_test/fast:
+	$(MAKE) $(MAKESILENT) -f leveldb\CMakeFiles\no_destructor_test.dir\build.make leveldb/CMakeFiles/no_destructor_test.dir/build
+.PHONY : no_destructor_test/fast
+
+#=============================================================================
+# Target rules for targets named issue178_test
+
+# Build rule for target.
+issue178_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 issue178_test
+.PHONY : issue178_test
+
+# fast build rule for target.
+issue178_test/fast:
+	$(MAKE) $(MAKESILENT) -f leveldb\CMakeFiles\issue178_test.dir\build.make leveldb/CMakeFiles/issue178_test.dir/build
+.PHONY : issue178_test/fast
+
+#=============================================================================
+# Target rules for targets named issue320_test
+
+# Build rule for target.
+issue320_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 issue320_test
+.PHONY : issue320_test
+
+# fast build rule for target.
+issue320_test/fast:
+	$(MAKE) $(MAKESILENT) -f leveldb\CMakeFiles\issue320_test.dir\build.make leveldb/CMakeFiles/issue320_test.dir/build
+.PHONY : issue320_test/fast
+
+#=============================================================================
+# Target rules for targets named status_test
+
+# Build rule for target.
+status_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 status_test
+.PHONY : status_test
+
+# fast build rule for target.
+status_test/fast:
+	$(MAKE) $(MAKESILENT) -f leveldb\CMakeFiles\status_test.dir\build.make leveldb/CMakeFiles/status_test.dir/build
+.PHONY : status_test/fast
+
+#=============================================================================
+# Target rules for targets named autocompact_test
+
+# Build rule for target.
+autocompact_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 autocompact_test
+.PHONY : autocompact_test
+
+# fast build rule for target.
+autocompact_test/fast:
+	$(MAKE) $(MAKESILENT) -f leveldb\CMakeFiles\autocompact_test.dir\build.make leveldb/CMakeFiles/autocompact_test.dir/build
+.PHONY : autocompact_test/fast
+
+#=============================================================================
+# Target rules for targets named db_test
+
+# Build rule for target.
+db_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 db_test
+.PHONY : db_test
+
+# fast build rule for target.
+db_test/fast:
+	$(MAKE) $(MAKESILENT) -f leveldb\CMakeFiles\db_test.dir\build.make leveldb/CMakeFiles/db_test.dir/build
+.PHONY : db_test/fast
+
+#=============================================================================
+# Target rules for targets named filename_test
+
+# Build rule for target.
+filename_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 filename_test
+.PHONY : filename_test
+
+# fast build rule for target.
+filename_test/fast:
+	$(MAKE) $(MAKESILENT) -f leveldb\CMakeFiles\filename_test.dir\build.make leveldb/CMakeFiles/filename_test.dir/build
+.PHONY : filename_test/fast
+
+#=============================================================================
+# Target rules for targets named memenv_test
+
+# Build rule for target.
+memenv_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 memenv_test
+.PHONY : memenv_test
+
+# fast build rule for target.
+memenv_test/fast:
+	$(MAKE) $(MAKESILENT) -f leveldb\CMakeFiles\memenv_test.dir\build.make leveldb/CMakeFiles/memenv_test.dir/build
+.PHONY : memenv_test/fast
+
+#=============================================================================
+# Target rules for targets named log_test
+
+# Build rule for target.
+log_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 log_test
+.PHONY : log_test
+
+# fast build rule for target.
+log_test/fast:
+	$(MAKE) $(MAKESILENT) -f leveldb\CMakeFiles\log_test.dir\build.make leveldb/CMakeFiles/log_test.dir/build
+.PHONY : log_test/fast
+
+#=============================================================================
+# Target rules for targets named env_windows_test
+
+# Build rule for target.
+env_windows_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 env_windows_test
+.PHONY : env_windows_test
+
+# fast build rule for target.
+env_windows_test/fast:
+	$(MAKE) $(MAKESILENT) -f leveldb\CMakeFiles\env_windows_test.dir\build.make leveldb/CMakeFiles/env_windows_test.dir/build
+.PHONY : env_windows_test/fast
+
+#=============================================================================
+# Target rules for targets named recovery_test
+
+# Build rule for target.
+recovery_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 recovery_test
+.PHONY : recovery_test
+
+# fast build rule for target.
+recovery_test/fast:
+	$(MAKE) $(MAKESILENT) -f leveldb\CMakeFiles\recovery_test.dir\build.make leveldb/CMakeFiles/recovery_test.dir/build
+.PHONY : recovery_test/fast
+
+#=============================================================================
+# Target rules for targets named skiplist_test
+
+# Build rule for target.
+skiplist_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 skiplist_test
+.PHONY : skiplist_test
+
+# fast build rule for target.
+skiplist_test/fast:
+	$(MAKE) $(MAKESILENT) -f leveldb\CMakeFiles\skiplist_test.dir\build.make leveldb/CMakeFiles/skiplist_test.dir/build
+.PHONY : skiplist_test/fast
+
+#=============================================================================
+# Target rules for targets named version_set_test
+
+# Build rule for target.
+version_set_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 version_set_test
+.PHONY : version_set_test
+
+# fast build rule for target.
+version_set_test/fast:
+	$(MAKE) $(MAKESILENT) -f leveldb\CMakeFiles\version_set_test.dir\build.make leveldb/CMakeFiles/version_set_test.dir/build
+.PHONY : version_set_test/fast
+
+#=============================================================================
+# Target rules for targets named write_batch_test
+
+# Build rule for target.
+write_batch_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 write_batch_test
+.PHONY : write_batch_test
+
+# fast build rule for target.
+write_batch_test/fast:
+	$(MAKE) $(MAKESILENT) -f leveldb\CMakeFiles\write_batch_test.dir\build.make leveldb/CMakeFiles/write_batch_test.dir/build
+.PHONY : write_batch_test/fast
+
+#=============================================================================
+# Target rules for targets named filter_block_test
+
+# Build rule for target.
+filter_block_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 filter_block_test
+.PHONY : filter_block_test
+
+# fast build rule for target.
+filter_block_test/fast:
+	$(MAKE) $(MAKESILENT) -f leveldb\CMakeFiles\filter_block_test.dir\build.make leveldb/CMakeFiles/filter_block_test.dir/build
+.PHONY : filter_block_test/fast
+
+#=============================================================================
+# Target rules for targets named table_test
+
+# Build rule for target.
+table_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 table_test
+.PHONY : table_test
+
+# fast build rule for target.
+table_test/fast:
+	$(MAKE) $(MAKESILENT) -f leveldb\CMakeFiles\table_test.dir\build.make leveldb/CMakeFiles/table_test.dir/build
+.PHONY : table_test/fast
+
+#=============================================================================
+# Target rules for targets named arena_test
+
+# Build rule for target.
+arena_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 arena_test
+.PHONY : arena_test
+
+# fast build rule for target.
+arena_test/fast:
+	$(MAKE) $(MAKESILENT) -f leveldb\CMakeFiles\arena_test.dir\build.make leveldb/CMakeFiles/arena_test.dir/build
+.PHONY : arena_test/fast
+
+#=============================================================================
+# Target rules for targets named bloom_test
+
+# Build rule for target.
+bloom_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 bloom_test
+.PHONY : bloom_test
+
+# fast build rule for target.
+bloom_test/fast:
+	$(MAKE) $(MAKESILENT) -f leveldb\CMakeFiles\bloom_test.dir\build.make leveldb/CMakeFiles/bloom_test.dir/build
+.PHONY : bloom_test/fast
+
+#=============================================================================
+# Target rules for targets named cache_test
+
+# Build rule for target.
+cache_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 cache_test
+.PHONY : cache_test
+
+# fast build rule for target.
+cache_test/fast:
+	$(MAKE) $(MAKESILENT) -f leveldb\CMakeFiles\cache_test.dir\build.make leveldb/CMakeFiles/cache_test.dir/build
+.PHONY : cache_test/fast
+
+#=============================================================================
+# Target rules for targets named coding_test
+
+# Build rule for target.
+coding_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 coding_test
+.PHONY : coding_test
+
+# fast build rule for target.
+coding_test/fast:
+	$(MAKE) $(MAKESILENT) -f leveldb\CMakeFiles\coding_test.dir\build.make leveldb/CMakeFiles/coding_test.dir/build
+.PHONY : coding_test/fast
+
+#=============================================================================
+# Target rules for targets named crc32c_test
+
+# Build rule for target.
+crc32c_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 crc32c_test
+.PHONY : crc32c_test
+
+# fast build rule for target.
+crc32c_test/fast:
+	$(MAKE) $(MAKESILENT) -f leveldb\CMakeFiles\crc32c_test.dir\build.make leveldb/CMakeFiles/crc32c_test.dir/build
+.PHONY : crc32c_test/fast
+
+#=============================================================================
+# Target rules for targets named hash_test
+
+# Build rule for target.
+hash_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 hash_test
+.PHONY : hash_test
+
+# fast build rule for target.
+hash_test/fast:
+	$(MAKE) $(MAKESILENT) -f leveldb\CMakeFiles\hash_test.dir\build.make leveldb/CMakeFiles/hash_test.dir/build
+.PHONY : hash_test/fast
+
+#=============================================================================
+# Target rules for targets named logging_test
+
+# Build rule for target.
+logging_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 logging_test
+.PHONY : logging_test
+
+# fast build rule for target.
+logging_test/fast:
+	$(MAKE) $(MAKESILENT) -f leveldb\CMakeFiles\logging_test.dir\build.make leveldb/CMakeFiles/logging_test.dir/build
+.PHONY : logging_test/fast
+
+#=============================================================================
+# Target rules for targets named db_bench
+
+# Build rule for target.
+db_bench: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 db_bench
+.PHONY : db_bench
+
+# fast build rule for target.
+db_bench/fast:
+	$(MAKE) $(MAKESILENT) -f leveldb\CMakeFiles\db_bench.dir\build.make leveldb/CMakeFiles/db_bench.dir/build
+.PHONY : db_bench/fast
+
+#=============================================================================
+# Target rules for targets named gmock_main
+
+# Build rule for target.
+gmock_main: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 gmock_main
+.PHONY : gmock_main
+
+# fast build rule for target.
+gmock_main/fast:
+	$(MAKE) $(MAKESILENT) -f leveldb\third_party\googletest\googlemock\CMakeFiles\gmock_main.dir\build.make leveldb/third_party/googletest/googlemock/CMakeFiles/gmock_main.dir/build
+.PHONY : gmock_main/fast
+
+#=============================================================================
+# Target rules for targets named gmock
+
+# Build rule for target.
+gmock: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 gmock
+.PHONY : gmock
+
+# fast build rule for target.
+gmock/fast:
+	$(MAKE) $(MAKESILENT) -f leveldb\third_party\googletest\googlemock\CMakeFiles\gmock.dir\build.make leveldb/third_party/googletest/googlemock/CMakeFiles/gmock.dir/build
+.PHONY : gmock/fast
+
+#=============================================================================
+# Target rules for targets named gtest
+
+# Build rule for target.
+gtest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 gtest
+.PHONY : gtest
+
+# fast build rule for target.
+gtest/fast:
+	$(MAKE) $(MAKESILENT) -f leveldb\third_party\googletest\googletest\CMakeFiles\gtest.dir\build.make leveldb/third_party/googletest/googletest/CMakeFiles/gtest.dir/build
+.PHONY : gtest/fast
+
+#=============================================================================
+# Target rules for targets named gtest_main
+
+# Build rule for target.
+gtest_main: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 gtest_main
+.PHONY : gtest_main
+
+# fast build rule for target.
+gtest_main/fast:
+	$(MAKE) $(MAKESILENT) -f leveldb\third_party\googletest\googletest\CMakeFiles\gtest_main.dir\build.make leveldb/third_party/googletest/googletest/CMakeFiles/gtest_main.dir/build
+.PHONY : gtest_main/fast
+
+#=============================================================================
+# Target rules for targets named dbshell
+
+# Build rule for target.
+dbshell: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 dbshell
+.PHONY : dbshell
+
+# fast build rule for target.
+dbshell/fast:
+	$(MAKE) $(MAKESILENT) -f dbshell\CMakeFiles\dbshell.dir\build.make dbshell/CMakeFiles/dbshell.dir/build
+.PHONY : dbshell/fast
+
+test_leveldb/from_github.obj: test_leveldb/from_github.cpp.obj
+
+.PHONY : test_leveldb/from_github.obj
 
 # target to build an object file
-src/main.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\boost_log.dir\build.make CMakeFiles/boost_log.dir/src/main.cpp.obj
-.PHONY : src/main.cpp.obj
+test_leveldb/from_github.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\boost_log.dir\build.make CMakeFiles/boost_log.dir/test_leveldb/from_github.cpp.obj
+.PHONY : test_leveldb/from_github.cpp.obj
 
-src/main.i: src/main.cpp.i
+test_leveldb/from_github.i: test_leveldb/from_github.cpp.i
 
-.PHONY : src/main.i
+.PHONY : test_leveldb/from_github.i
 
 # target to preprocess a source file
-src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\boost_log.dir\build.make CMakeFiles/boost_log.dir/src/main.cpp.i
-.PHONY : src/main.cpp.i
+test_leveldb/from_github.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\boost_log.dir\build.make CMakeFiles/boost_log.dir/test_leveldb/from_github.cpp.i
+.PHONY : test_leveldb/from_github.cpp.i
 
-src/main.s: src/main.cpp.s
+test_leveldb/from_github.s: test_leveldb/from_github.cpp.s
 
-.PHONY : src/main.s
+.PHONY : test_leveldb/from_github.s
 
 # target to generate assembly for a file
-src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\boost_log.dir\build.make CMakeFiles/boost_log.dir/src/main.cpp.s
-.PHONY : src/main.cpp.s
+test_leveldb/from_github.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\boost_log.dir\build.make CMakeFiles/boost_log.dir/test_leveldb/from_github.cpp.s
+.PHONY : test_leveldb/from_github.cpp.s
 
 # Help Target
 help:
@@ -188,12 +741,55 @@ help:
 	@echo ... clean
 	@echo ... depend
 	@echo ... edit_cache
+	@echo ... install
+	@echo ... install/local
+	@echo ... install/strip
+	@echo ... list_install_components
 	@echo ... rebuild_cache
+	@echo ... arena_test
+	@echo ... autocompact_test
+	@echo ... bloom_test
 	@echo ... boost_log
+	@echo ... btclibs
+	@echo ... c_test
+	@echo ... cache_test
+	@echo ... coding_test
+	@echo ... corruption_test
+	@echo ... crc32c_test
+	@echo ... db_bench
+	@echo ... db_test
+	@echo ... dbformat_test
+	@echo ... dbshell
+	@echo ... env_test
+	@echo ... env_windows_test
+	@echo ... fault_injection_test
+	@echo ... filename_test
+	@echo ... filter_block_test
+	@echo ... gmock
+	@echo ... gmock_main
+	@echo ... gtest
+	@echo ... gtest_main
+	@echo ... hash_test
+	@echo ... issue178_test
+	@echo ... issue200_test
+	@echo ... issue320_test
+	@echo ... leveldb
+	@echo ... leveldbutil
+	@echo ... log_test
+	@echo ... logging_test
+	@echo ... memenv_test
+	@echo ... no_destructor_test
+	@echo ... recovery_test
+	@echo ... skiplist_test
+	@echo ... status_test
+	@echo ... table_test
 	@echo ... univalue
-	@echo ... src/main.obj
-	@echo ... src/main.i
-	@echo ... src/main.s
+	@echo ... version_edit_test
+	@echo ... version_set_test
+	@echo ... write_batch_test
+	@echo ... test_leveldb/from_github.obj
+	@echo ... test_leveldb/from_github.i
+	@echo ... test_leveldb/from_github.s
 .PHONY : help
 
 

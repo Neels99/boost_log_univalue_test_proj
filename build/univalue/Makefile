@@ -66,13 +66,47 @@ RM = "C:\Program Files (x86)\CMake\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\vasil\Desktop\boost_test\boost-log-example-master\boost-log-example-master
+CMAKE_SOURCE_DIR = C:\Users\vasil\Desktop\boost_test\boost-log-example-master\boost_log_univalue_test_proj
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\vasil\Desktop\boost_test\boost-log-example-master\boost-log-example-master\build
+CMAKE_BINARY_DIR = C:\Users\vasil\Desktop\boost_test\boost-log-example-master\boost_log_univalue_test_proj\build
 
 #=============================================================================
 # Targets provided globally by CMake.
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	"C:\Program Files (x86)\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	"C:\Program Files (x86)\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	"C:\Program Files (x86)\CMake\bin\cmake.exe" -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	"C:\Program Files (x86)\CMake\bin\cmake.exe" -P cmake_install.cmake
+.PHONY : install/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -96,16 +130,28 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	"C:\Program Files (x86)\CMake\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	"C:\Program Files (x86)\CMake\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
+
 # The main all target
 all: cmake_check_build_system
-	cd /d C:\Users\vasil\Desktop\boost_test\boost-log-example-master\boost-log-example-master\build && $(CMAKE_COMMAND) -E cmake_progress_start C:\Users\vasil\Desktop\boost_test\boost-log-example-master\boost-log-example-master\build\CMakeFiles C:\Users\vasil\Desktop\boost_test\boost-log-example-master\boost-log-example-master\build\univalue\\CMakeFiles\progress.marks
-	cd /d C:\Users\vasil\Desktop\boost_test\boost-log-example-master\boost-log-example-master\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 univalue/all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\vasil\Desktop\boost_test\boost-log-example-master\boost-log-example-master\build\CMakeFiles 0
+	cd /d C:\Users\vasil\Desktop\boost_test\boost-log-example-master\boost_log_univalue_test_proj\build && $(CMAKE_COMMAND) -E cmake_progress_start C:\Users\vasil\Desktop\boost_test\boost-log-example-master\boost_log_univalue_test_proj\build\CMakeFiles C:\Users\vasil\Desktop\boost_test\boost-log-example-master\boost_log_univalue_test_proj\build\univalue\\CMakeFiles\progress.marks
+	cd /d C:\Users\vasil\Desktop\boost_test\boost-log-example-master\boost_log_univalue_test_proj\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 univalue/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\vasil\Desktop\boost_test\boost-log-example-master\boost_log_univalue_test_proj\build\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /d C:\Users\vasil\Desktop\boost_test\boost-log-example-master\boost-log-example-master\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 univalue/clean
+	cd /d C:\Users\vasil\Desktop\boost_test\boost-log-example-master\boost_log_univalue_test_proj\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 univalue/clean
 .PHONY : clean
 
 # The main clean target
@@ -115,22 +161,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /d C:\Users\vasil\Desktop\boost_test\boost-log-example-master\boost-log-example-master\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 univalue/preinstall
+	cd /d C:\Users\vasil\Desktop\boost_test\boost-log-example-master\boost_log_univalue_test_proj\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 univalue/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /d C:\Users\vasil\Desktop\boost_test\boost-log-example-master\boost-log-example-master\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 univalue/preinstall
+	cd /d C:\Users\vasil\Desktop\boost_test\boost-log-example-master\boost_log_univalue_test_proj\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 univalue/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /d C:\Users\vasil\Desktop\boost_test\boost-log-example-master\boost-log-example-master\build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
+	cd /d C:\Users\vasil\Desktop\boost_test\boost-log-example-master\boost_log_univalue_test_proj\build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 univalue/CMakeFiles/univalue.dir/rule:
-	cd /d C:\Users\vasil\Desktop\boost_test\boost-log-example-master\boost-log-example-master\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 univalue/CMakeFiles/univalue.dir/rule
+	cd /d C:\Users\vasil\Desktop\boost_test\boost-log-example-master\boost_log_univalue_test_proj\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 univalue/CMakeFiles/univalue.dir/rule
 .PHONY : univalue/CMakeFiles/univalue.dir/rule
 
 # Convenience name for target.
@@ -140,7 +186,7 @@ univalue: univalue/CMakeFiles/univalue.dir/rule
 
 # fast build rule for target.
 univalue/fast:
-	cd /d C:\Users\vasil\Desktop\boost_test\boost-log-example-master\boost-log-example-master\build && $(MAKE) $(MAKESILENT) -f univalue\CMakeFiles\univalue.dir\build.make univalue/CMakeFiles/univalue.dir/build
+	cd /d C:\Users\vasil\Desktop\boost_test\boost-log-example-master\boost_log_univalue_test_proj\build && $(MAKE) $(MAKESILENT) -f univalue\CMakeFiles\univalue.dir\build.make univalue/CMakeFiles/univalue.dir/build
 .PHONY : univalue/fast
 
 lib/univalue.obj: lib/univalue.cpp.obj
@@ -149,7 +195,7 @@ lib/univalue.obj: lib/univalue.cpp.obj
 
 # target to build an object file
 lib/univalue.cpp.obj:
-	cd /d C:\Users\vasil\Desktop\boost_test\boost-log-example-master\boost-log-example-master\build && $(MAKE) $(MAKESILENT) -f univalue\CMakeFiles\univalue.dir\build.make univalue/CMakeFiles/univalue.dir/lib/univalue.cpp.obj
+	cd /d C:\Users\vasil\Desktop\boost_test\boost-log-example-master\boost_log_univalue_test_proj\build && $(MAKE) $(MAKESILENT) -f univalue\CMakeFiles\univalue.dir\build.make univalue/CMakeFiles/univalue.dir/lib/univalue.cpp.obj
 .PHONY : lib/univalue.cpp.obj
 
 lib/univalue.i: lib/univalue.cpp.i
@@ -158,7 +204,7 @@ lib/univalue.i: lib/univalue.cpp.i
 
 # target to preprocess a source file
 lib/univalue.cpp.i:
-	cd /d C:\Users\vasil\Desktop\boost_test\boost-log-example-master\boost-log-example-master\build && $(MAKE) $(MAKESILENT) -f univalue\CMakeFiles\univalue.dir\build.make univalue/CMakeFiles/univalue.dir/lib/univalue.cpp.i
+	cd /d C:\Users\vasil\Desktop\boost_test\boost-log-example-master\boost_log_univalue_test_proj\build && $(MAKE) $(MAKESILENT) -f univalue\CMakeFiles\univalue.dir\build.make univalue/CMakeFiles/univalue.dir/lib/univalue.cpp.i
 .PHONY : lib/univalue.cpp.i
 
 lib/univalue.s: lib/univalue.cpp.s
@@ -167,7 +213,7 @@ lib/univalue.s: lib/univalue.cpp.s
 
 # target to generate assembly for a file
 lib/univalue.cpp.s:
-	cd /d C:\Users\vasil\Desktop\boost_test\boost-log-example-master\boost-log-example-master\build && $(MAKE) $(MAKESILENT) -f univalue\CMakeFiles\univalue.dir\build.make univalue/CMakeFiles/univalue.dir/lib/univalue.cpp.s
+	cd /d C:\Users\vasil\Desktop\boost_test\boost-log-example-master\boost_log_univalue_test_proj\build && $(MAKE) $(MAKESILENT) -f univalue\CMakeFiles\univalue.dir\build.make univalue/CMakeFiles/univalue.dir/lib/univalue.cpp.s
 .PHONY : lib/univalue.cpp.s
 
 lib/univalue_get.obj: lib/univalue_get.cpp.obj
@@ -176,7 +222,7 @@ lib/univalue_get.obj: lib/univalue_get.cpp.obj
 
 # target to build an object file
 lib/univalue_get.cpp.obj:
-	cd /d C:\Users\vasil\Desktop\boost_test\boost-log-example-master\boost-log-example-master\build && $(MAKE) $(MAKESILENT) -f univalue\CMakeFiles\univalue.dir\build.make univalue/CMakeFiles/univalue.dir/lib/univalue_get.cpp.obj
+	cd /d C:\Users\vasil\Desktop\boost_test\boost-log-example-master\boost_log_univalue_test_proj\build && $(MAKE) $(MAKESILENT) -f univalue\CMakeFiles\univalue.dir\build.make univalue/CMakeFiles/univalue.dir/lib/univalue_get.cpp.obj
 .PHONY : lib/univalue_get.cpp.obj
 
 lib/univalue_get.i: lib/univalue_get.cpp.i
@@ -185,7 +231,7 @@ lib/univalue_get.i: lib/univalue_get.cpp.i
 
 # target to preprocess a source file
 lib/univalue_get.cpp.i:
-	cd /d C:\Users\vasil\Desktop\boost_test\boost-log-example-master\boost-log-example-master\build && $(MAKE) $(MAKESILENT) -f univalue\CMakeFiles\univalue.dir\build.make univalue/CMakeFiles/univalue.dir/lib/univalue_get.cpp.i
+	cd /d C:\Users\vasil\Desktop\boost_test\boost-log-example-master\boost_log_univalue_test_proj\build && $(MAKE) $(MAKESILENT) -f univalue\CMakeFiles\univalue.dir\build.make univalue/CMakeFiles/univalue.dir/lib/univalue_get.cpp.i
 .PHONY : lib/univalue_get.cpp.i
 
 lib/univalue_get.s: lib/univalue_get.cpp.s
@@ -194,7 +240,7 @@ lib/univalue_get.s: lib/univalue_get.cpp.s
 
 # target to generate assembly for a file
 lib/univalue_get.cpp.s:
-	cd /d C:\Users\vasil\Desktop\boost_test\boost-log-example-master\boost-log-example-master\build && $(MAKE) $(MAKESILENT) -f univalue\CMakeFiles\univalue.dir\build.make univalue/CMakeFiles/univalue.dir/lib/univalue_get.cpp.s
+	cd /d C:\Users\vasil\Desktop\boost_test\boost-log-example-master\boost_log_univalue_test_proj\build && $(MAKE) $(MAKESILENT) -f univalue\CMakeFiles\univalue.dir\build.make univalue/CMakeFiles/univalue.dir/lib/univalue_get.cpp.s
 .PHONY : lib/univalue_get.cpp.s
 
 lib/univalue_read.obj: lib/univalue_read.cpp.obj
@@ -203,7 +249,7 @@ lib/univalue_read.obj: lib/univalue_read.cpp.obj
 
 # target to build an object file
 lib/univalue_read.cpp.obj:
-	cd /d C:\Users\vasil\Desktop\boost_test\boost-log-example-master\boost-log-example-master\build && $(MAKE) $(MAKESILENT) -f univalue\CMakeFiles\univalue.dir\build.make univalue/CMakeFiles/univalue.dir/lib/univalue_read.cpp.obj
+	cd /d C:\Users\vasil\Desktop\boost_test\boost-log-example-master\boost_log_univalue_test_proj\build && $(MAKE) $(MAKESILENT) -f univalue\CMakeFiles\univalue.dir\build.make univalue/CMakeFiles/univalue.dir/lib/univalue_read.cpp.obj
 .PHONY : lib/univalue_read.cpp.obj
 
 lib/univalue_read.i: lib/univalue_read.cpp.i
@@ -212,7 +258,7 @@ lib/univalue_read.i: lib/univalue_read.cpp.i
 
 # target to preprocess a source file
 lib/univalue_read.cpp.i:
-	cd /d C:\Users\vasil\Desktop\boost_test\boost-log-example-master\boost-log-example-master\build && $(MAKE) $(MAKESILENT) -f univalue\CMakeFiles\univalue.dir\build.make univalue/CMakeFiles/univalue.dir/lib/univalue_read.cpp.i
+	cd /d C:\Users\vasil\Desktop\boost_test\boost-log-example-master\boost_log_univalue_test_proj\build && $(MAKE) $(MAKESILENT) -f univalue\CMakeFiles\univalue.dir\build.make univalue/CMakeFiles/univalue.dir/lib/univalue_read.cpp.i
 .PHONY : lib/univalue_read.cpp.i
 
 lib/univalue_read.s: lib/univalue_read.cpp.s
@@ -221,7 +267,7 @@ lib/univalue_read.s: lib/univalue_read.cpp.s
 
 # target to generate assembly for a file
 lib/univalue_read.cpp.s:
-	cd /d C:\Users\vasil\Desktop\boost_test\boost-log-example-master\boost-log-example-master\build && $(MAKE) $(MAKESILENT) -f univalue\CMakeFiles\univalue.dir\build.make univalue/CMakeFiles/univalue.dir/lib/univalue_read.cpp.s
+	cd /d C:\Users\vasil\Desktop\boost_test\boost-log-example-master\boost_log_univalue_test_proj\build && $(MAKE) $(MAKESILENT) -f univalue\CMakeFiles\univalue.dir\build.make univalue/CMakeFiles/univalue.dir/lib/univalue_read.cpp.s
 .PHONY : lib/univalue_read.cpp.s
 
 lib/univalue_write.obj: lib/univalue_write.cpp.obj
@@ -230,7 +276,7 @@ lib/univalue_write.obj: lib/univalue_write.cpp.obj
 
 # target to build an object file
 lib/univalue_write.cpp.obj:
-	cd /d C:\Users\vasil\Desktop\boost_test\boost-log-example-master\boost-log-example-master\build && $(MAKE) $(MAKESILENT) -f univalue\CMakeFiles\univalue.dir\build.make univalue/CMakeFiles/univalue.dir/lib/univalue_write.cpp.obj
+	cd /d C:\Users\vasil\Desktop\boost_test\boost-log-example-master\boost_log_univalue_test_proj\build && $(MAKE) $(MAKESILENT) -f univalue\CMakeFiles\univalue.dir\build.make univalue/CMakeFiles/univalue.dir/lib/univalue_write.cpp.obj
 .PHONY : lib/univalue_write.cpp.obj
 
 lib/univalue_write.i: lib/univalue_write.cpp.i
@@ -239,7 +285,7 @@ lib/univalue_write.i: lib/univalue_write.cpp.i
 
 # target to preprocess a source file
 lib/univalue_write.cpp.i:
-	cd /d C:\Users\vasil\Desktop\boost_test\boost-log-example-master\boost-log-example-master\build && $(MAKE) $(MAKESILENT) -f univalue\CMakeFiles\univalue.dir\build.make univalue/CMakeFiles/univalue.dir/lib/univalue_write.cpp.i
+	cd /d C:\Users\vasil\Desktop\boost_test\boost-log-example-master\boost_log_univalue_test_proj\build && $(MAKE) $(MAKESILENT) -f univalue\CMakeFiles\univalue.dir\build.make univalue/CMakeFiles/univalue.dir/lib/univalue_write.cpp.i
 .PHONY : lib/univalue_write.cpp.i
 
 lib/univalue_write.s: lib/univalue_write.cpp.s
@@ -248,7 +294,7 @@ lib/univalue_write.s: lib/univalue_write.cpp.s
 
 # target to generate assembly for a file
 lib/univalue_write.cpp.s:
-	cd /d C:\Users\vasil\Desktop\boost_test\boost-log-example-master\boost-log-example-master\build && $(MAKE) $(MAKESILENT) -f univalue\CMakeFiles\univalue.dir\build.make univalue/CMakeFiles/univalue.dir/lib/univalue_write.cpp.s
+	cd /d C:\Users\vasil\Desktop\boost_test\boost-log-example-master\boost_log_univalue_test_proj\build && $(MAKE) $(MAKESILENT) -f univalue\CMakeFiles\univalue.dir\build.make univalue/CMakeFiles/univalue.dir/lib/univalue_write.cpp.s
 .PHONY : lib/univalue_write.cpp.s
 
 # Help Target
@@ -258,6 +304,10 @@ help:
 	@echo ... clean
 	@echo ... depend
 	@echo ... edit_cache
+	@echo ... install
+	@echo ... install/local
+	@echo ... install/strip
+	@echo ... list_install_components
 	@echo ... rebuild_cache
 	@echo ... univalue
 	@echo ... lib/univalue.obj
@@ -283,6 +333,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /d C:\Users\vasil\Desktop\boost_test\boost-log-example-master\boost-log-example-master\build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
+	cd /d C:\Users\vasil\Desktop\boost_test\boost-log-example-master\boost_log_univalue_test_proj\build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
