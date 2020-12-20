@@ -1,0 +1,659 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4,
+						8
+					],
+					"hasInstallRule" : true,
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.18.1"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						3
+					]
+				},
+				{
+					"build" : "pylib",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.18.1"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "pylib",
+					"targetIndexes" : 
+					[
+						33
+					]
+				},
+				{
+					"build" : "univalue",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.18.1"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 2,
+					"source" : "univalue",
+					"targetIndexes" : 
+					[
+						38
+					]
+				},
+				{
+					"build" : "btclibs",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.18.1"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 3,
+					"source" : "btclibs",
+					"targetIndexes" : 
+					[
+						4
+					]
+				},
+				{
+					"build" : "leveldb",
+					"childIndexes" : 
+					[
+						5
+					],
+					"hasInstallRule" : true,
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.9"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 4,
+					"source" : "leveldb",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						32,
+						34,
+						35,
+						36,
+						37,
+						39,
+						40,
+						41
+					]
+				},
+				{
+					"build" : "leveldb/third_party/googletest",
+					"childIndexes" : 
+					[
+						6
+					],
+					"hasInstallRule" : true,
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8.8"
+					},
+					"parentIndex" : 4,
+					"projectIndex" : 5,
+					"source" : "leveldb/third_party/googletest"
+				},
+				{
+					"build" : "leveldb/third_party/googletest/googlemock",
+					"childIndexes" : 
+					[
+						7
+					],
+					"hasInstallRule" : true,
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.6.4"
+					},
+					"parentIndex" : 5,
+					"projectIndex" : 6,
+					"source" : "leveldb/third_party/googletest/googlemock",
+					"targetIndexes" : 
+					[
+						18,
+						19
+					]
+				},
+				{
+					"build" : "leveldb/third_party/googletest/googletest",
+					"hasInstallRule" : true,
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.6.4"
+					},
+					"parentIndex" : 6,
+					"projectIndex" : 7,
+					"source" : "leveldb/third_party/googletest/googletest",
+					"targetIndexes" : 
+					[
+						20,
+						21
+					]
+				},
+				{
+					"build" : "networks",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.18.1"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 8,
+					"source" : "networks",
+					"targetIndexes" : 
+					[
+						31
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4,
+						8
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "boost_log",
+					"targetIndexes" : 
+					[
+						3
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1
+					],
+					"name" : "pylib",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						33
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						2
+					],
+					"name" : "univalue",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						38
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						3
+					],
+					"name" : "btclibs",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						4
+					]
+				},
+				{
+					"childIndexes" : 
+					[
+						5
+					],
+					"directoryIndexes" : 
+					[
+						4
+					],
+					"name" : "leveldb",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						32,
+						34,
+						35,
+						36,
+						37,
+						39,
+						40,
+						41
+					]
+				},
+				{
+					"childIndexes" : 
+					[
+						6
+					],
+					"directoryIndexes" : 
+					[
+						5
+					],
+					"name" : "googletest-distribution",
+					"parentIndex" : 4
+				},
+				{
+					"childIndexes" : 
+					[
+						7
+					],
+					"directoryIndexes" : 
+					[
+						6
+					],
+					"name" : "gmock",
+					"parentIndex" : 5,
+					"targetIndexes" : 
+					[
+						18,
+						19
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						7
+					],
+					"name" : "gtest",
+					"parentIndex" : 6,
+					"targetIndexes" : 
+					[
+						20,
+						21
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						8
+					],
+					"name" : "networks",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						31
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 4,
+					"id" : "arena_test::@fd116fd6900a2752e96d",
+					"jsonFile" : "target-arena_test-Debug-431e4b3549a8173b3c85.json",
+					"name" : "arena_test",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "autocompact_test::@fd116fd6900a2752e96d",
+					"jsonFile" : "target-autocompact_test-Debug-95b0767675e75f8166e4.json",
+					"name" : "autocompact_test",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "bloom_test::@fd116fd6900a2752e96d",
+					"jsonFile" : "target-bloom_test-Debug-8e8ba46d377e2b405993.json",
+					"name" : "bloom_test",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "boost_log::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-boost_log-Debug-e90c1becd74b4add67d1.json",
+					"name" : "boost_log",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "btclibs::@7e5e81556705562a48d2",
+					"jsonFile" : "target-btclibs-Debug-fba10ff6f1ed5fafca97.json",
+					"name" : "btclibs",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "c_test::@fd116fd6900a2752e96d",
+					"jsonFile" : "target-c_test-Debug-540598eb491431531315.json",
+					"name" : "c_test",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "cache_test::@fd116fd6900a2752e96d",
+					"jsonFile" : "target-cache_test-Debug-f5929888bfa59b83d606.json",
+					"name" : "cache_test",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "coding_test::@fd116fd6900a2752e96d",
+					"jsonFile" : "target-coding_test-Debug-68625f72cb379f1fd7ad.json",
+					"name" : "coding_test",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "corruption_test::@fd116fd6900a2752e96d",
+					"jsonFile" : "target-corruption_test-Debug-04dcb695b9252ac979c5.json",
+					"name" : "corruption_test",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "crc32c_test::@fd116fd6900a2752e96d",
+					"jsonFile" : "target-crc32c_test-Debug-a44f696a8d8f27d25199.json",
+					"name" : "crc32c_test",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "db_bench::@fd116fd6900a2752e96d",
+					"jsonFile" : "target-db_bench-Debug-d401a75c1dd59a7e1e0e.json",
+					"name" : "db_bench",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "db_test::@fd116fd6900a2752e96d",
+					"jsonFile" : "target-db_test-Debug-7d1214dd4d6ad91a50e5.json",
+					"name" : "db_test",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "dbformat_test::@fd116fd6900a2752e96d",
+					"jsonFile" : "target-dbformat_test-Debug-da6da96691f142366fef.json",
+					"name" : "dbformat_test",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "env_test::@fd116fd6900a2752e96d",
+					"jsonFile" : "target-env_test-Debug-12ba372b54e6dab1f45e.json",
+					"name" : "env_test",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "env_windows_test::@fd116fd6900a2752e96d",
+					"jsonFile" : "target-env_windows_test-Debug-119af25b280737261e2a.json",
+					"name" : "env_windows_test",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "fault_injection_test::@fd116fd6900a2752e96d",
+					"jsonFile" : "target-fault_injection_test-Debug-392942d8ad171bd661c1.json",
+					"name" : "fault_injection_test",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "filename_test::@fd116fd6900a2752e96d",
+					"jsonFile" : "target-filename_test-Debug-9a8405552a3754efa645.json",
+					"name" : "filename_test",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "filter_block_test::@fd116fd6900a2752e96d",
+					"jsonFile" : "target-filter_block_test-Debug-f8acdf055fd3feed008a.json",
+					"name" : "filter_block_test",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "gmock::@26fd4d37619d29aed726",
+					"jsonFile" : "target-gmock-Debug-ff378aa8100fbb37cc41.json",
+					"name" : "gmock",
+					"projectIndex" : 6
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "gmock_main::@26fd4d37619d29aed726",
+					"jsonFile" : "target-gmock_main-Debug-545a3be520d4db013c51.json",
+					"name" : "gmock_main",
+					"projectIndex" : 6
+				},
+				{
+					"directoryIndex" : 7,
+					"id" : "gtest::@6ac4b6cc4df7fe213291",
+					"jsonFile" : "target-gtest-Debug-5ffecb195a1422034d53.json",
+					"name" : "gtest",
+					"projectIndex" : 7
+				},
+				{
+					"directoryIndex" : 7,
+					"id" : "gtest_main::@6ac4b6cc4df7fe213291",
+					"jsonFile" : "target-gtest_main-Debug-802103e1886f4e567383.json",
+					"name" : "gtest_main",
+					"projectIndex" : 7
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "hash_test::@fd116fd6900a2752e96d",
+					"jsonFile" : "target-hash_test-Debug-faa5871d0650a4c5f99e.json",
+					"name" : "hash_test",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "issue178_test::@fd116fd6900a2752e96d",
+					"jsonFile" : "target-issue178_test-Debug-df3a200e51f47f9e5b4f.json",
+					"name" : "issue178_test",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "issue200_test::@fd116fd6900a2752e96d",
+					"jsonFile" : "target-issue200_test-Debug-3cfc1d7637e566d2dab7.json",
+					"name" : "issue200_test",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "issue320_test::@fd116fd6900a2752e96d",
+					"jsonFile" : "target-issue320_test-Debug-376012433fc489687afd.json",
+					"name" : "issue320_test",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "leveldb::@fd116fd6900a2752e96d",
+					"jsonFile" : "target-leveldb-Debug-31f6b801bdad2d38ace8.json",
+					"name" : "leveldb",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "leveldbutil::@fd116fd6900a2752e96d",
+					"jsonFile" : "target-leveldbutil-Debug-c660b3c01c0b7d096e75.json",
+					"name" : "leveldbutil",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "log_test::@fd116fd6900a2752e96d",
+					"jsonFile" : "target-log_test-Debug-0a3a2f51acf4c39d593c.json",
+					"name" : "log_test",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "logging_test::@fd116fd6900a2752e96d",
+					"jsonFile" : "target-logging_test-Debug-858cfb86cefd8c772d5d.json",
+					"name" : "logging_test",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "memenv_test::@fd116fd6900a2752e96d",
+					"jsonFile" : "target-memenv_test-Debug-81d14e8df41fa301392d.json",
+					"name" : "memenv_test",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 8,
+					"id" : "networks::@53e60568a1f75aaca382",
+					"jsonFile" : "target-networks-Debug-5aa3d240a93420d1f3d4.json",
+					"name" : "networks",
+					"projectIndex" : 8
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "no_destructor_test::@fd116fd6900a2752e96d",
+					"jsonFile" : "target-no_destructor_test-Debug-c6ceef7a7b314571b8d0.json",
+					"name" : "no_destructor_test",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "pylib::@bacff57fd2eea7faf9dc",
+					"jsonFile" : "target-pylib-Debug-4baa50f9efe4225d4431.json",
+					"name" : "pylib",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "recovery_test::@fd116fd6900a2752e96d",
+					"jsonFile" : "target-recovery_test-Debug-a5d12d25d3a09b4e80e7.json",
+					"name" : "recovery_test",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "skiplist_test::@fd116fd6900a2752e96d",
+					"jsonFile" : "target-skiplist_test-Debug-08b55fe6f6a900d063f4.json",
+					"name" : "skiplist_test",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "status_test::@fd116fd6900a2752e96d",
+					"jsonFile" : "target-status_test-Debug-f19bde6c845ae63d81f3.json",
+					"name" : "status_test",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "table_test::@fd116fd6900a2752e96d",
+					"jsonFile" : "target-table_test-Debug-59ecd036ece774b13af3.json",
+					"name" : "table_test",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "univalue::@846bf969268785f9fb11",
+					"jsonFile" : "target-univalue-Debug-61e3944d8d9ecf8be9c3.json",
+					"name" : "univalue",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "version_edit_test::@fd116fd6900a2752e96d",
+					"jsonFile" : "target-version_edit_test-Debug-a38ceb638bc3fd7a27ee.json",
+					"name" : "version_edit_test",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "version_set_test::@fd116fd6900a2752e96d",
+					"jsonFile" : "target-version_set_test-Debug-0608404197fe21ce469a.json",
+					"name" : "version_set_test",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "write_batch_test::@fd116fd6900a2752e96d",
+					"jsonFile" : "target-write_batch_test-Debug-edb43a20c5999a8d33f8.json",
+					"name" : "write_batch_test",
+					"projectIndex" : 4
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/vasil/Desktop/boost_test/boost-log-example-master/boost_log_univalue_test_proj/build",
+		"source" : "C:/Users/vasil/Desktop/boost_test/boost-log-example-master/boost_log_univalue_test_proj"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 1
+	}
+}

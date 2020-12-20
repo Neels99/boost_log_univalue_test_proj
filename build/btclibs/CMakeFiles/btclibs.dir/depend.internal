@@ -3,6 +3,9 @@
 
 btclibs/CMakeFiles/btclibs.dir/arith_uint256.cpp.obj
  ../btclibs/arith_uint256.h
+ ../btclibs/compat/byteswap.h
+ ../btclibs/compat/endian.h
+ ../btclibs/crypto/common.h
  ../btclibs/uint256.h
  C:/Users/vasil/Desktop/boost_test/boost-log-example-master/boost_log_univalue_test_proj/btclibs/arith_uint256.cpp
 btclibs/CMakeFiles/btclibs.dir/uint256.cpp.obj

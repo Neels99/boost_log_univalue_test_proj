@@ -16,8 +16,9 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "../dbshell"
+  "../pylib"
   "../btclibs"
+  "../networks"
   "leveldb/include"
   "../leveldb/."
   "../leveldb/third_party/googletest/googletest/include"

@@ -1,0 +1,278 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "boost_log.exe"
+		},
+		{
+			"path" : "boost_log.pdb"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_executable",
+			"target_link_libraries",
+			"include_directories"
+		],
+		"files" : 
+		[
+			"CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 20,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 23,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 39,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 28,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 29,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 30,
+				"parent" : 0
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-g"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 2,
+					"define" : "BOOST_ALL_NO_LIB"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 4,
+					"path" : "C:/Users/vasil/Desktop/boost_test/boost-log-example-master/boost_log_univalue_test_proj/pylib"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "C:/Users/vasil/Desktop/boost_test/boost-log-example-master/boost_log_univalue_test_proj/btclibs"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "C:/Users/vasil/Desktop/boost_test/boost-log-example-master/boost_log_univalue_test_proj/networks"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/vasil/Desktop/boost_test/boost-log-example-master/boost_log_univalue_test_proj/univalue/include"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/vasil/Desktop/boost_test/boost-log-example-master/boost_log_univalue_test_proj/leveldb/include"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "C:/Program Files/boost/boost_1_74_0/boost-build/include/boost-1_74"
+				}
+			],
+			"language" : "CXX",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 3,
+			"id" : "pylib::@bacff57fd2eea7faf9dc"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "btclibs::@7e5e81556705562a48d2"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "leveldb::@fd116fd6900a2752e96d"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "univalue::@846bf969268785f9fb11"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "networks::@53e60568a1f75aaca382"
+		}
+	],
+	"id" : "boost_log::@6890427a1f51a3e7e1df",
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "-g",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "\"C:\\Program Files\\boost\\boost_1_74_0\\boost-build\\lib\\libboost_fiber-mgw8-mt-d-x64-1_74.a\"",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "\"C:\\Program Files\\boost\\boost_1_74_0\\boost-build\\lib\\libboost_log-mgw8-mt-d-x64-1_74.a\"",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "\"C:\\Program Files\\boost\\boost_1_74_0\\boost-build\\lib\\libboost_log_setup-mgw8-mt-d-x64-1_74.a\"",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "\"C:\\Program Files\\boost\\boost_1_74_0\\boost-build\\lib\\libboost_filesystem-mgw8-mt-d-x64-1_74.a\"",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "\"C:\\Program Files\\boost\\boost_1_74_0\\boost-build\\lib\\libboost_fiber-mgw8-mt-d-x64-1_74.a\"",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "\"C:\\Program Files\\boost\\boost_1_74_0\\boost-build\\lib\\libboost_log_setup-mgw8-mt-d-x64-1_74.a\"",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "\"C:\\Program Files\\boost\\boost_1_74_0\\boost-build\\lib\\libboost_log-mgw8-mt-d-x64-1_74.a\"",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "\"C:\\Program Files\\boost\\boost_1_74_0\\boost-build\\lib\\libboost_filesystem-mgw8-mt-d-x64-1_74.a\"",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "univalue\\libunivalue.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "btclibs\\libbtclibs.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "leveldb\\libleveldb.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "networks\\libnetworks.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "pylib\\libpylib.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "\"C:\\Program Files\\boost\\boost_1_74_0\\boost-build\\lib\\libboost_context-mgw8-mt-d-x64-1_74.a\"",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "\"C:\\Program Files\\boost\\boost_1_74_0\\boost-build\\lib\\libboost_atomic-mgw8-mt-d-x64-1_74.a\"",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "\"C:\\Program Files\\boost\\boost_1_74_0\\boost-build\\lib\\libboost_regex-mgw8-mt-d-x64-1_74.a\"",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "\"C:\\Program Files\\boost\\boost_1_74_0\\boost-build\\lib\\libboost_thread-mgw8-mt-d-x64-1_74.a\"",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "\"C:\\Program Files\\boost\\boost_1_74_0\\boost-build\\lib\\libboost_chrono-mgw8-mt-d-x64-1_74.a\"",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "btclibs\\libbtclibs.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32",
+				"role" : "libraries"
+			}
+		],
+		"language" : "CXX"
+	},
+	"name" : "boost_log",
+	"nameOnDisk" : "boost_log.exe",
+	"paths" : 
+	{
+		"build" : ".",
+		"source" : "."
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/fiber_coroutine/fiber_test3.cpp",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "EXECUTABLE"
+}

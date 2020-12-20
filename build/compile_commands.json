@@ -1,8 +1,13 @@
 [
 {
   "directory": "C:/Users/vasil/Desktop/boost_test/boost-log-example-master/boost_log_univalue_test_proj/build",
-  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\G__~1.EXE -DBOOST_ALL_NO_LIB @CMakeFiles/boost_log.dir/includes_CXX.rsp -g -o CMakeFiles\\boost_log.dir\\test_leveldb\\from_github.cpp.obj -c C:\\Users\\vasil\\Desktop\\boost_test\\boost-log-example-master\\boost_log_univalue_test_proj\\test_leveldb\\from_github.cpp",
-  "file": "C:/Users/vasil/Desktop/boost_test/boost-log-example-master/boost_log_univalue_test_proj/test_leveldb/from_github.cpp"
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\G__~1.EXE -DBOOST_ALL_NO_LIB @CMakeFiles/boost_log.dir/includes_CXX.rsp -g -o CMakeFiles\\boost_log.dir\\src\\fiber_coroutine\\fiber_test3.cpp.obj -c C:\\Users\\vasil\\Desktop\\boost_test\\boost-log-example-master\\boost_log_univalue_test_proj\\src\\fiber_coroutine\\fiber_test3.cpp",
+  "file": "C:/Users/vasil/Desktop/boost_test/boost-log-example-master/boost_log_univalue_test_proj/src/fiber_coroutine/fiber_test3.cpp"
+},
+{
+  "directory": "C:/Users/vasil/Desktop/boost_test/boost-log-example-master/boost_log_univalue_test_proj/build/pylib",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\G__~1.EXE  @CMakeFiles/pylib.dir/includes_CXX.rsp -g -o CMakeFiles\\pylib.dir\\pybase.cpp.obj -c C:\\Users\\vasil\\Desktop\\boost_test\\boost-log-example-master\\boost_log_univalue_test_proj\\pylib\\pybase.cpp",
+  "file": "C:/Users/vasil/Desktop/boost_test/boost-log-example-master/boost_log_univalue_test_proj/pylib/pybase.cpp"
 },
 {
   "directory": "C:/Users/vasil/Desktop/boost_test/boost-log-example-master/boost_log_univalue_test_proj/build/univalue",
@@ -575,18 +580,8 @@
   "file": "C:/Users/vasil/Desktop/boost_test/boost-log-example-master/boost_log_univalue_test_proj/leveldb/third_party/googletest/googletest/src/gtest_main.cc"
 },
 {
-  "directory": "C:/Users/vasil/Desktop/boost_test/boost-log-example-master/boost_log_univalue_test_proj/build/dbshell",
-  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\G__~1.EXE  @CMakeFiles/dbshell.dir/includes_CXX.rsp -g -o CMakeFiles\\dbshell.dir\\db.cpp.obj -c C:\\Users\\vasil\\Desktop\\boost_test\\boost-log-example-master\\boost_log_univalue_test_proj\\dbshell\\db.cpp",
-  "file": "C:/Users/vasil/Desktop/boost_test/boost-log-example-master/boost_log_univalue_test_proj/dbshell/db.cpp"
-},
-{
-  "directory": "C:/Users/vasil/Desktop/boost_test/boost-log-example-master/boost_log_univalue_test_proj/build/dbshell",
-  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\G__~1.EXE  @CMakeFiles/dbshell.dir/includes_CXX.rsp -g -o CMakeFiles\\dbshell.dir\\dbObject.cpp.obj -c C:\\Users\\vasil\\Desktop\\boost_test\\boost-log-example-master\\boost_log_univalue_test_proj\\dbshell\\dbObject.cpp",
-  "file": "C:/Users/vasil/Desktop/boost_test/boost-log-example-master/boost_log_univalue_test_proj/dbshell/dbObject.cpp"
-},
-{
-  "directory": "C:/Users/vasil/Desktop/boost_test/boost-log-example-master/boost_log_univalue_test_proj/build/dbshell",
-  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\G__~1.EXE  @CMakeFiles/dbshell.dir/includes_CXX.rsp -g -o CMakeFiles\\dbshell.dir\\dbBatch.cpp.obj -c C:\\Users\\vasil\\Desktop\\boost_test\\boost-log-example-master\\boost_log_univalue_test_proj\\dbshell\\dbBatch.cpp",
-  "file": "C:/Users/vasil/Desktop/boost_test/boost-log-example-master/boost_log_univalue_test_proj/dbshell/dbBatch.cpp"
+  "directory": "C:/Users/vasil/Desktop/boost_test/boost-log-example-master/boost_log_univalue_test_proj/build/networks",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\G__~1.EXE  @CMakeFiles/networks.dir/includes_CXX.rsp -g -o CMakeFiles\\networks.dir\\config.cpp.obj -c C:\\Users\\vasil\\Desktop\\boost_test\\boost-log-example-master\\boost_log_univalue_test_proj\\networks\\config.cpp",
+  "file": "C:/Users/vasil/Desktop/boost_test/boost-log-example-master/boost_log_univalue_test_proj/networks/config.cpp"
 }
 ]

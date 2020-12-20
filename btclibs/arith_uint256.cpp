@@ -79,6 +79,7 @@ base_uint<BITS>& base_uint<BITS>::operator*=(const base_uint& b)
     return *this;
 }
 
+#include <iostream>
 template <unsigned int BITS>
 base_uint<BITS>& base_uint<BITS>::operator/=(const base_uint& b)
 {
@@ -87,11 +88,13 @@ base_uint<BITS>& base_uint<BITS>::operator/=(const base_uint& b)
     *this = 0;                   // the quotient.
     int num_bits = num.bits();
     int div_bits = div.bits();
+    std::cout << "num_bits = " << num_bits << "; div_bits = " << div_bits << std::endl;
     if (div_bits == 0)
         throw uint_error("Division by zero");
     if (div_bits > num_bits) // the result is certainly 0.
         return *this;
     int shift = num_bits - div_bits;
+    std::cout << "shift = " << shift << std::endl;
     div <<= shift; // shift so that div and num align.
     while (shift >= 0) {
         if (num >= div) {

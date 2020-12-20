@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/vasil/Desktop/boost_test/boost-log-example-master/boost_log_univalue_test_proj/pylib/pybase.cpp
+pybase.h
+C:/Users/vasil/Desktop/boost_test/boost-log-example-master/boost_log_univalue_test_proj/pylib/pybase.h
+iostream
+-
+
+C:/Users/vasil/Desktop/boost_test/boost-log-example-master/boost_log_univalue_test_proj/pylib/pybase.h
+

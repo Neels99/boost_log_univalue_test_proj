@@ -20,6 +20,10 @@ BUILD_GMOCK:BOOL=ON
 //The directory containing a CMake configuration file for Boost.
 Boost_DIR:PATH=C:/Program Files/boost/boost_1_74_0/boost-build/lib/cmake/Boost-1.74.0
 
+Boost_FIBER_LIBRARY_DEBUG:STRING=C:/Program Files/boost/boost_1_74_0/boost-build/lib/libboost_fiber-mgw8-mt-d-x64-1_74.a
+
+Boost_FIBER_LIBRARY_RELEASE:STRING=C:/Program Files/boost/boost_1_74_0/boost-build/lib/libboost_fiber-mgw8-mt-x64-1_74.a
+
 Boost_FILESYSTEM_LIBRARY_DEBUG:STRING=C:/Program Files/boost/boost_1_74_0/boost-build/lib/libboost_filesystem-mgw8-mt-d-x64-1_74.a
 
 Boost_FILESYSTEM_LIBRARY_RELEASE:STRING=C:/Program Files/boost/boost_1_74_0/boost-build/lib/libboost_filesystem-mgw8-mt-x64-1_74.a
@@ -347,6 +351,12 @@ boost_atomic_DIR:PATH=C:/Program Files/boost/boost_1_74_0/boost-build/lib/cmake/
 //The directory containing a CMake configuration file for boost_chrono.
 boost_chrono_DIR:PATH=C:/Program Files/boost/boost_1_74_0/boost-build/lib/cmake/boost_chrono-1.74.0
 
+//The directory containing a CMake configuration file for boost_context.
+boost_context_DIR:PATH=C:/Program Files/boost/boost_1_74_0/boost-build/lib/cmake/boost_context-1.74.0
+
+//The directory containing a CMake configuration file for boost_fiber.
+boost_fiber_DIR:PATH=C:/Program Files/boost/boost_1_74_0/boost-build/lib/cmake/boost_fiber-1.74.0
+
 //The directory containing a CMake configuration file for boost_filesystem.
 boost_filesystem_DIR:PATH=C:/Program Files/boost/boost_1_74_0/boost-build/lib/cmake/boost_filesystem-1.74.0
 
@@ -367,6 +377,12 @@ boost_log_setup_DIR:PATH=C:/Program Files/boost/boost_1_74_0/boost-build/lib/cma
 
 //The directory containing a CMake configuration file for boost_regex.
 boost_regex_DIR:PATH=C:/Program Files/boost/boost_1_74_0/boost-build/lib/cmake/boost_regex-1.74.0
+
+//The directory containing a CMake configuration file for boost_signals2.
+boost_signals2_DIR:PATH=boost_signals2_DIR-NOTFOUND
+
+//The directory containing a CMake configuration file for boost_signals.
+boost_signals_DIR:PATH=boost_signals_DIR-NOTFOUND
 
 //The directory containing a CMake configuration file for boost_thread.
 boost_thread_DIR:PATH=C:/Program Files/boost/boost_1_74_0/boost-build/lib/cmake/boost_thread-1.74.0
@@ -434,6 +450,18 @@ leveldb_BINARY_DIR:STATIC=C:/Users/vasil/Desktop/boost_test/boost-log-example-ma
 
 //Value Computed by CMake
 leveldb_SOURCE_DIR:STATIC=C:/Users/vasil/Desktop/boost_test/boost-log-example-master/boost_log_univalue_test_proj/leveldb
+
+//Value Computed by CMake
+networks_BINARY_DIR:STATIC=C:/Users/vasil/Desktop/boost_test/boost-log-example-master/boost_log_univalue_test_proj/build/networks
+
+//Value Computed by CMake
+networks_SOURCE_DIR:STATIC=C:/Users/vasil/Desktop/boost_test/boost-log-example-master/boost_log_univalue_test_proj/networks
+
+//Value Computed by CMake
+pylib_BINARY_DIR:STATIC=C:/Users/vasil/Desktop/boost_test/boost-log-example-master/boost_log_univalue_test_proj/build/pylib
+
+//Value Computed by CMake
+pylib_SOURCE_DIR:STATIC=C:/Users/vasil/Desktop/boost_test/boost-log-example-master/boost_log_univalue_test_proj/pylib
 
 //Value Computed by CMake
 univalue_BINARY_DIR:STATIC=C:/Users/vasil/Desktop/boost_test/boost-log-example-master/boost_log_univalue_test_proj/build/univalue
@@ -586,7 +614,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=8
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=9
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -641,9 +669,11 @@ CMAKE_STRIP-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 //Details about finding Boost
-FIND_PACKAGE_MESSAGE_DETAILS_Boost:INTERNAL=[C:/Program Files/boost/boost_1_74_0/boost-build/lib/cmake/Boost-1.74.0/BoostConfig.cmake][cfound components: log log_setup filesystem ][v1.74.0(1.74.0)]
+FIND_PACKAGE_MESSAGE_DETAILS_Boost:INTERNAL=[C:/Program Files/boost/boost_1_74_0/boost-build/lib/cmake/Boost-1.74.0/BoostConfig.cmake][cfound components: fiber log log_setup filesystem ][v1.74.0(1.74.0)]
+//Details about finding Python3
+FIND_PACKAGE_MESSAGE_DETAILS_Python3:INTERNAL=[C:/Program Files/WindowsApps/PythonSoftwareFoundation.Python.3.9_3.9.240.0_x64__qbz5n2kfra8p0/libs/python39.lib][C:/Program Files/WindowsApps/PythonSoftwareFoundation.Python.3.9_3.9.240.0_x64__qbz5n2kfra8p0/include][cfound components: Development Development.Module Development.Embed ][v3.9.0()]
 //Details about finding PythonInterp
-FIND_PACKAGE_MESSAGE_DETAILS_PythonInterp:INTERNAL=[C:/Program Files/WindowsApps/PythonSoftwareFoundation.Python.3.8_3.8.1776.0_x64__qbz5n2kfra8p0/python.exe][v3.8.6()]
+FIND_PACKAGE_MESSAGE_DETAILS_PythonInterp:INTERNAL=[C:/Program Files/WindowsApps/PythonSoftwareFoundation.Python.3.8_3.8.1776.0_x64__qbz5n2kfra8p0/python.exe][v()]
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
 //Test HAVE_CLANG_THREAD_SAFETY
@@ -674,10 +704,26 @@ LEVELDB_HAVE_NO_MISSING_FIELD_INITIALIZERS:INTERNAL=1
 PYTHON_EXECUTABLE-ADVANCED:INTERNAL=1
 //CMAKE_INSTALL_PREFIX during last run
 _GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=C:/Program Files (x86)/boost_log
+//Path to a program.
+_Python3_CONFIG:INTERNAL=_Python3_CONFIG-NOTFOUND
+_Python3_DEVELOPMENT_EMBED_SIGNATURE:INTERNAL=3f215cbcff817fa8319dc2f386718c4a
+_Python3_DEVELOPMENT_MODULE_SIGNATURE:INTERNAL=3f215cbcff817fa8319dc2f386718c4a
+//Path to a file.
+_Python3_INCLUDE_DIR:INTERNAL=C:/Program Files/WindowsApps/PythonSoftwareFoundation.Python.3.9_3.9.240.0_x64__qbz5n2kfra8p0/include
+//Path to a library.
+_Python3_LIBRARY_DEBUG:INTERNAL=_Python3_LIBRARY_DEBUG-NOTFOUND
+//Path to a library.
+_Python3_LIBRARY_RELEASE:INTERNAL=C:/Program Files/WindowsApps/PythonSoftwareFoundation.Python.3.9_3.9.240.0_x64__qbz5n2kfra8p0/libs/python39.lib
+//Path to a library.
+_Python3_RUNTIME_LIBRARY_RELEASE:INTERNAL=C:/Program Files/WindowsApps/PythonSoftwareFoundation.Python.3.9_3.9.240.0_x64__qbz5n2kfra8p0/python39.dll
 //ADVANCED property for variable: boost_atomic_DIR
 boost_atomic_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: boost_chrono_DIR
 boost_chrono_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: boost_context_DIR
+boost_context_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: boost_fiber_DIR
+boost_fiber_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: boost_filesystem_DIR
 boost_filesystem_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: boost_headers_DIR

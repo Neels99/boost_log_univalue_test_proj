@@ -188,6 +188,19 @@ boost_log/fast:
 .PHONY : boost_log/fast
 
 #=============================================================================
+# Target rules for targets named pylib
+
+# Build rule for target.
+pylib: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 pylib
+.PHONY : pylib
+
+# fast build rule for target.
+pylib/fast:
+	$(MAKE) $(MAKESILENT) -f pylib\CMakeFiles\pylib.dir\build.make pylib/CMakeFiles/pylib.dir/build
+.PHONY : pylib/fast
+
+#=============================================================================
 # Target rules for targets named univalue
 
 # Build rule for target.
@@ -695,44 +708,44 @@ gtest_main/fast:
 .PHONY : gtest_main/fast
 
 #=============================================================================
-# Target rules for targets named dbshell
+# Target rules for targets named networks
 
 # Build rule for target.
-dbshell: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 dbshell
-.PHONY : dbshell
+networks: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 networks
+.PHONY : networks
 
 # fast build rule for target.
-dbshell/fast:
-	$(MAKE) $(MAKESILENT) -f dbshell\CMakeFiles\dbshell.dir\build.make dbshell/CMakeFiles/dbshell.dir/build
-.PHONY : dbshell/fast
+networks/fast:
+	$(MAKE) $(MAKESILENT) -f networks\CMakeFiles\networks.dir\build.make networks/CMakeFiles/networks.dir/build
+.PHONY : networks/fast
 
-test_leveldb/from_github.obj: test_leveldb/from_github.cpp.obj
+src/fiber_coroutine/fiber_test3.obj: src/fiber_coroutine/fiber_test3.cpp.obj
 
-.PHONY : test_leveldb/from_github.obj
+.PHONY : src/fiber_coroutine/fiber_test3.obj
 
 # target to build an object file
-test_leveldb/from_github.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\boost_log.dir\build.make CMakeFiles/boost_log.dir/test_leveldb/from_github.cpp.obj
-.PHONY : test_leveldb/from_github.cpp.obj
+src/fiber_coroutine/fiber_test3.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\boost_log.dir\build.make CMakeFiles/boost_log.dir/src/fiber_coroutine/fiber_test3.cpp.obj
+.PHONY : src/fiber_coroutine/fiber_test3.cpp.obj
 
-test_leveldb/from_github.i: test_leveldb/from_github.cpp.i
+src/fiber_coroutine/fiber_test3.i: src/fiber_coroutine/fiber_test3.cpp.i
 
-.PHONY : test_leveldb/from_github.i
+.PHONY : src/fiber_coroutine/fiber_test3.i
 
 # target to preprocess a source file
-test_leveldb/from_github.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\boost_log.dir\build.make CMakeFiles/boost_log.dir/test_leveldb/from_github.cpp.i
-.PHONY : test_leveldb/from_github.cpp.i
+src/fiber_coroutine/fiber_test3.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\boost_log.dir\build.make CMakeFiles/boost_log.dir/src/fiber_coroutine/fiber_test3.cpp.i
+.PHONY : src/fiber_coroutine/fiber_test3.cpp.i
 
-test_leveldb/from_github.s: test_leveldb/from_github.cpp.s
+src/fiber_coroutine/fiber_test3.s: src/fiber_coroutine/fiber_test3.cpp.s
 
-.PHONY : test_leveldb/from_github.s
+.PHONY : src/fiber_coroutine/fiber_test3.s
 
 # target to generate assembly for a file
-test_leveldb/from_github.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\boost_log.dir\build.make CMakeFiles/boost_log.dir/test_leveldb/from_github.cpp.s
-.PHONY : test_leveldb/from_github.cpp.s
+src/fiber_coroutine/fiber_test3.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\boost_log.dir\build.make CMakeFiles/boost_log.dir/src/fiber_coroutine/fiber_test3.cpp.s
+.PHONY : src/fiber_coroutine/fiber_test3.cpp.s
 
 # Help Target
 help:
@@ -759,7 +772,6 @@ help:
 	@echo ... db_bench
 	@echo ... db_test
 	@echo ... dbformat_test
-	@echo ... dbshell
 	@echo ... env_test
 	@echo ... env_windows_test
 	@echo ... fault_injection_test
@@ -778,7 +790,9 @@ help:
 	@echo ... log_test
 	@echo ... logging_test
 	@echo ... memenv_test
+	@echo ... networks
 	@echo ... no_destructor_test
+	@echo ... pylib
 	@echo ... recovery_test
 	@echo ... skiplist_test
 	@echo ... status_test
@@ -787,9 +801,9 @@ help:
 	@echo ... version_edit_test
 	@echo ... version_set_test
 	@echo ... write_batch_test
-	@echo ... test_leveldb/from_github.obj
-	@echo ... test_leveldb/from_github.i
-	@echo ... test_leveldb/from_github.s
+	@echo ... src/fiber_coroutine/fiber_test3.obj
+	@echo ... src/fiber_coroutine/fiber_test3.i
+	@echo ... src/fiber_coroutine/fiber_test3.s
 .PHONY : help
 
 
