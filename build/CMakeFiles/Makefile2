@@ -319,10 +319,10 @@ univalue/clean: univalue/CMakeFiles/univalue.dir/clean
 # Target rules for target CMakeFiles/boost_log.dir
 
 # All Build rule for target.
-CMakeFiles/boost_log.dir/all: pylib/CMakeFiles/pylib.dir/all
-CMakeFiles/boost_log.dir/all: btclibs/CMakeFiles/btclibs.dir/all
-CMakeFiles/boost_log.dir/all: leveldb/CMakeFiles/leveldb.dir/all
 CMakeFiles/boost_log.dir/all: univalue/CMakeFiles/univalue.dir/all
+CMakeFiles/boost_log.dir/all: leveldb/CMakeFiles/leveldb.dir/all
+CMakeFiles/boost_log.dir/all: btclibs/CMakeFiles/btclibs.dir/all
+CMakeFiles/boost_log.dir/all: pylib/CMakeFiles/pylib.dir/all
 CMakeFiles/boost_log.dir/all: networks/CMakeFiles/networks.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\boost_log.dir\build.make CMakeFiles/boost_log.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\boost_log.dir\build.make CMakeFiles/boost_log.dir/build

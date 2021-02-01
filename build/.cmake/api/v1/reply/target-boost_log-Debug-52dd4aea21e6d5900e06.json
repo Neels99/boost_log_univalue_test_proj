@@ -119,11 +119,7 @@
 	[
 		{
 			"backtrace" : 3,
-			"id" : "pylib::@bacff57fd2eea7faf9dc"
-		},
-		{
-			"backtrace" : 3,
-			"id" : "btclibs::@7e5e81556705562a48d2"
+			"id" : "univalue::@846bf969268785f9fb11"
 		},
 		{
 			"backtrace" : 3,
@@ -131,7 +127,11 @@
 		},
 		{
 			"backtrace" : 3,
-			"id" : "univalue::@846bf969268785f9fb11"
+			"id" : "btclibs::@7e5e81556705562a48d2"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "pylib::@bacff57fd2eea7faf9dc"
 		},
 		{
 			"backtrace" : 3,
